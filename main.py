@@ -31,9 +31,11 @@ def number_of_operations(list_of_numbers: list[int]) -> int | str:
     
     for index, number in enumerate(list_of_numbers):
         if index < length - 1:
-            if number == list_of_numbers[index + 1]:
+            if number == list_of_numbers[index + 1] and number <= length:
                 wrong_numbers.append(number)
     
+    # Sort wrong numbers
+    wrong_numbers = sorted(wrong_numbers)
     # Identify missing numbers in the list of numbers
     
     missing_numbers = []
