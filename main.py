@@ -18,31 +18,29 @@ def number_of_operations(list_of_numbers: list[int]) -> int | str:
     if length == 0:
         return 'List of numbers must be non empty'
 
+    # Create a list of the final permutation
     permutation = list(range(1,length+1))
     
-    # find wrong numbers
+    # find wrong numbers missing in the list of numbers
     wrong_numbers = []
     for number in list_of_numbers:
         if number not in permutation:
             wrong_numbers.append(number)
     
-    # Identify duplicates
+    # Identify duplicates and add them to the list of wrong numbers
     
     for index, number in enumerate(list_of_numbers):
         if index < length - 1:
             if number == list_of_numbers[index + 1]:
                 wrong_numbers.append(number)
     
-    # Identify missing numbers
+    # Identify missing numbers in the list of numbers
     
     missing_numbers = []
     
     for number in permutation:
         if number not in list_of_numbers:
             missing_numbers.append(number)
-    
-    print("missing numbers:", missing_numbers)
-    print("wrong numbers", wrong_numbers)
     
     # For each missing number
     operation_number = 0
