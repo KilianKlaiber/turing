@@ -9,7 +9,7 @@ print(f"Result: {number_of_operations(test_input)}")
 # Sorted input: [1, 1, 3]
 # Length: 3
 # Permutation: [1, 2, 3]
-# 
+#
 # Wrong numbers:
 # - 3 is in permutation, so not added initially
 # - 1 appears twice consecutively and 1 <= 3, so one 1 is added
