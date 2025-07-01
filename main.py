@@ -52,7 +52,7 @@ def number_of_operations(list_of_numbers: list[int]) -> int | str:
         closest_number = wrong_numbers[0]
         
         for wrong_number in wrong_numbers:
-            if abs(wrong_number-missing_number) < abs(wrong_number - closest_number):
+            if abs(wrong_number-missing_number) < abs(closest_number - missing_number):
                 closest_number = wrong_number
         # Calculate the distance to the missing number and add it to the minimum number of operations
         operation_number += abs(closest_number - missing_number)
